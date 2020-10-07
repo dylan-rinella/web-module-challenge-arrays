@@ -142,10 +142,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors){
-    return originalFlavors.splice();
+function removeFlavorByName(originalFlavors, string){
+    for(let i = 0; i < originalFlavors.length; i++){
+        if(originalFlavors[i] === string){
+            originalFlavors.splice(i, 1);   
+        }        
+    }
+    return (originalFlavors);
 }
-console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
